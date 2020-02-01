@@ -1,0 +1,36 @@
+<div class="comment-container">
+
+  <div class="header">
+
+    <p class="timestamp">{{ date }}</p>
+
+    <p class="type">
+      <b>{{ type }}</b> Priority
+    </p>
+
+  </div>
+
+  <div class="main">
+
+    <div class="content">
+      {{ comment.content }}
+    </div>
+
+    <div class="options">
+      <img class="delete-button" (click)=this.deleteCommentEmit() type="image/svg+xml"
+        src="../../assets/icons/trash_bin.svg">
+
+      <img class="edit-button" (click)=this.toggleEditButton() type="image/svg+xml"
+        src="../../assets/icons/edit_button.svg">
+    </div>
+
+  </div>
+
+  <div class="edit-section" *ngIf=this.show>
+    <textarea class="edit-field" type="text" [(ngModel)]="this.updatedComment"></textarea>
+
+    <div class="submit-edit-button" (click)=this.toggleEditButton();this.updateComment()>
+      Update</div>
+  </div>
+
+</div>

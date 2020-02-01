@@ -1,0 +1,11 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  /* grid-template-rows: 1fr 7fr; */
+  justify-content: center;
+}
+
+.other-comments {
+  max-height: 40rem;
+  overflow: auto;
+}

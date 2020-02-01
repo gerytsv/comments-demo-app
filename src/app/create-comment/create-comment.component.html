@@ -1,0 +1,14 @@
+<div class="wrapper">
+  <div class="create">
+    <div class="type">
+      <select class="dropdown" [(ngModel)]="this.type">
+        <option selected disabled>Choose priority</option>
+        <option value="Low">Low</option>
+        <option value="Medium">Medium</option>
+        <option value="High">High</option>
+      </select>
+    </div>
+    <textarea type="text" placeholder="Write a comment..." [(ngModel)]=this.content></textarea>
+    <button class="submit-btn" (click)=this.onSubmitButtonClick() [disabled]="this.content===''">Submit</button>
+  </div>
+</div>
