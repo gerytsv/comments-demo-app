@@ -1,0 +1,9 @@
+.clouds-top {
+  background-image: url('../assets/decor/clouds_top-transperent.png');
+  z-index: -1;
+  width: 100vw;
+  height: 45vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+}
